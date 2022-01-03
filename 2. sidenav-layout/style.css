@@ -23,6 +23,7 @@ aside.sidebar {
    display: flex;
    justify-content: center;
    align-items: center;
+   transition: all 0.2s ease-in-out;
 }
 
 main.content-wrapper {
@@ -54,6 +55,7 @@ main.content-wrapper main {
    justify-content: center;
    align-items: center;
    flex-direction: column;
+   min-height: 100vh;
 }
 
 @media screen and (max-width: 768px) {

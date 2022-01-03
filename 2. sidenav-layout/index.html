@@ -9,18 +9,24 @@
 </head>
 <body>
    <!-- Content Wrapper -->
+   <!-- DOM (Data Object Model)-->
    <div class="container">
       <aside class="sidebar">
          <h4>Sidebar</h4>
       </aside>
 
       <main class="content-wrapper">
-         <header>
+         <header class>
             <h4>Top Navbar</h4>
          </header>
 
-         <main>
-            <h4>Content</h4>
+         <main class>
+            <!-- <h4>Content</h4>
+            <button type="button" onclick="toggleSidebar()">Sidebar Toggle</button>
+            -->
+            <input type="text" name="" id="nama">
+            <button type="button" onclick="sendNama()">Submit</button>
+            <span id="result_nama"></span>
          </main>
 
          <footer>
@@ -28,5 +34,24 @@
          </footer>
       </main>
    </div>
+
+   <script>
+      var sidebarShow = true;
+
+      function toggleSidebar() {
+         if (sidebarShow) {
+            document.querySelector(".sidebar").style.marginLeft = "-230px";
+            sidebarShow = false;
+         } else {
+            document.querySelector(".sidebar").style.marginLeft = "0px";
+            sidebarShow = true;
+         }
+      }
+
+      function sendNama() {
+         var nama = document.querySelector("#nama").value;
+         document.querySelector("#result_nama").innerHTML = nama;
+      }
+   </script>
 </body>
 </html>
